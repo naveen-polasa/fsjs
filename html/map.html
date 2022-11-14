@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+</head>
+<body>
+    <img src="https://images.unsplash.com/photo-1667826914993-f86d2a27f0c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80" alt="image"  usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="rect1()" target="_blank" href="http://www.google.com" coords="175,109,1692,884" shape="rect">
+    <area onclick="rect2()" target="_blank" href="http://www.linkedin.com" coords="1802,1824,102,1049" shape="rect">
+    <area onclick="circle()" target="_blank" href="http://www.twitter.com" coords="916,2333,466" shape="circle">
+</map>
+<script>
+    function rect1() {
+        alert("first rectangle");
+    }
+    function rect2() {
+        alert("second rectangle");
+    }
+    function circle() {
+        alert("circle");
+    }
+</script>
+</body>
+</html>

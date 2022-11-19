@@ -1,0 +1,44 @@
+.container{
+
+    border: 2px solid black;
+    background: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png) no-repeat;
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+}
+.container{
+
+    border: 2px solid black;
+    background: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png), url(https://images.unsplash.com/photo-1668666709605-b2e707cc932d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80);
+    height: 500px;
+}
+
+.container1{
+    font-size: 39px;
+    writing-mode: vertical-lr;
+}
+.container2{
+    font-size: 39px;
+    writing-mode: horizontal-tb;
+}
+.container3{
+    font-size: 39px;
+    writing-mode: vertical-rl;
+}
+
+.container4{
+    border: 2px solid black;
+    font-size: 30px;
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+.container5{
+    font-size: 2rem;
+}
+
+.container6 ul li{
+    list-style-type: decimal;
+}

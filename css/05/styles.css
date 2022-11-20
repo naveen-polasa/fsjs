@@ -1,0 +1,48 @@
+.item{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: #FFCB74;
+    font-size: 30px;
+    margin: 16px;
+}
+
+.item3{
+    position: sticky;
+    top: 10px;
+    left: 50px;
+}
+
+/* .relative-border{
+    border: 2px solid black;
+    
+} */
+
+/* .item1{
+    position: static;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+} */
+
+/* .item2{
+    position: relative;
+    top: 40px;
+    left: 10px;
+} */
+/* 
+.item3{
+    position: absolute;
+    bottom: 10px;
+    right: ;
+} */
+
+/* .item4{
+    position: fixed;
+    right: 10px;
+} */
+
+.content{
+    writing-mode: vertical-lr;
+}

@@ -105,3 +105,14 @@ switch (month) {
     console.log("enter correct month");
     break;
 }
+
+/********  question 17 & 18  ********/
+
+// passing the day as zero results as the last date of the month so calling getDate() will return the number of the days in that month this function works fine for the leap year also
+
+const getDays = (year,month) => {
+    console.log(`${new Date(year, month, 0).getDate()} Days`)
+}
+
+getDays(2022,1)
+getDays(2020,2)

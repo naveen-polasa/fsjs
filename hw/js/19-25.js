@@ -61,18 +61,21 @@ console.log(medianAge);
 /********  question 23 ********/
 
 const input2 = JSON.parse(prompt("enter the number:"));
-let bool = false
 
-for (let i = 2; i < input2; i++) {
-  if (input2 % i == 0) {
-    bool = true
-  } 
+function checkPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
-if(bool) {
-  console.log("Number is not a Prime")
+if (checkPrime(input2)) {
+  console.log("Number is a Prime");
 } else {
-  console.log("Number is a Prime")
+  console.log("Number is Not a Prime");
 }
 
 /********  question 24 ********/
@@ -94,22 +97,20 @@ console.log(oddArr);
 /********  question 25 ********/
 
 const weight = JSON.parse(prompt("enter your weight in KGs"));
-const height = JSON.parse(prompt("enter your height CMs"))/100;
+const height = JSON.parse(prompt("enter your height CMs")) / 100;
 
 function getBMI(weight, height) {
-
   const BMI = (weight / (height * height)).toFixed(2);
-  
-  if(BMI < 18.5) {
-      console.log(`Your BMI is ${BMI} you are Underwieght`)
-  } else if (BMI >= 18.5 && BMI <=24.9) {
-      console.log(`Your BMI is ${BMI} you have Normal wieght`)
-  } else if (BMI >= 25 && BMI <=29.9) {
-      console.log(`Your BMI is ${BMI} you have Overweight`)
-  } else if (BMI >= 30) {
-      console.log(`Your BMI is ${BMI} you are Obese`)
-  }
 
+  if (BMI < 18.5) {
+    console.log(`Your BMI is ${BMI} you are Underwieght`);
+  } else if (BMI >= 18.5 && BMI <= 24.9) {
+    console.log(`Your BMI is ${BMI} you have Normal wieght`);
+  } else if (BMI >= 25 && BMI <= 29.9) {
+    console.log(`Your BMI is ${BMI} you have Overweight`);
+  } else if (BMI >= 30) {
+    console.log(`Your BMI is ${BMI} you are Obese`);
+  }
 }
 
-getBMI(weight, height)
+getBMI(weight, height);

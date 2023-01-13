@@ -61,11 +61,18 @@ console.log(medianAge);
 /********  question 23 ********/
 
 const input2 = JSON.parse(prompt("enter the number:"));
+let bool = false
 
-if (input2 % 2 === 0) {
-  console.log("Number is Even");
+for (let i = 2; i < input2; i++) {
+  if (input2 % i == 0) {
+    bool = true
+  } 
+}
+
+if(bool) {
+  console.log("Number is not a Prime")
 } else {
-  console.log("Number is Odd");
+  console.log("Number is a Prime")
 }
 
 /********  question 24 ********/

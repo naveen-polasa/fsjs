@@ -89,14 +89,20 @@ console.log(oddArr);
 const weight = JSON.parse(prompt("enter your weight in KGs"));
 const height = JSON.parse(prompt("enter your height CMs"))/100;
 
-const BMI = (weight / (height * height)).toFixed(2);
+function getBMI(weight, height) {
 
-if(BMI < 18.5) {
-    console.log(`Your BMI is ${BMI} you are Underwieght`)
-} else if (BMI >= 18.5 && BMI <=24.9) {
-    console.log(`Your BMI is ${BMI} you have Normal wieght`)
-} else if (BMI >= 25 && BMI <=29.9) {
-    console.log(`Your BMI is ${BMI} you have Overweight`)
-} else if (BMI >= 30) {
-    console.log(`Your BMI is ${BMI} you are Obese`)
+  const BMI = (weight / (height * height)).toFixed(2);
+  
+  if(BMI < 18.5) {
+      console.log(`Your BMI is ${BMI} you are Underwieght`)
+  } else if (BMI >= 18.5 && BMI <=24.9) {
+      console.log(`Your BMI is ${BMI} you have Normal wieght`)
+  } else if (BMI >= 25 && BMI <=29.9) {
+      console.log(`Your BMI is ${BMI} you have Overweight`)
+  } else if (BMI >= 30) {
+      console.log(`Your BMI is ${BMI} you are Obese`)
+  }
+
 }
+
+getBMI(weight, height)

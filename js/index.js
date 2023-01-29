@@ -851,8 +851,6 @@
 // let result = quoteSample.match(myRegex); // Change this line
 // console.log(result)
 
-
-
 // async function async() {
 //   const url = await fetch(
 //     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
@@ -862,7 +860,6 @@
 //   }
 
 //   async()
-
 
 // function alarm(person, delay) {
 //   return new Promise((resolve, reject) => {
@@ -875,14 +872,12 @@
 //   });
 // }
 
-
 // alarm('naveen',1000).then(msg=> console.log(msg))
-
 
 // async function alarmy() {
 //   const alarmi = await alarm('naveen', 1000 );
 //   console.log(alarmi)
-// } 
+// }
 
 // alarmy()
 
@@ -897,3 +892,60 @@
 // const object1 = Object.create(prototype1);
 
 // console.log(Object.getPrototypeOf(object1) === prototype1);
+
+// const users = [
+//   { firstName: "akshay", lastName: "saini", age: 26 },
+//   { firstName: "donald", lastName: "trump", age: 75 },
+//   { firstName: "deepika", lastName: "padukone", age: 26 },
+// ];
+
+// const output = users.reduce((ac, cur) => {
+//     if(cur.age < 30) {
+//         ac.push(cur.firstName)
+//     }
+//     return ac
+// },[])
+// console.log(output)
+
+// const api = "https://api.github.com/users/naveen-polasa/";
+
+// const user = fetch(api)
+// console.log(user)
+
+// const cart = ["shirts", "mobile", "laptop"];
+
+// const promise = createOrder(cart);
+
+// promise
+//   .then((orderId) => {
+//     return orderId;
+//   })
+//   .then((id) => {
+//     return proceedToPayment(id);
+//   })
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message));
+
+// function createOrder(cart) {
+//   const pr = new Promise((res, rej) => {
+//     if (!validateCart(cart)) {
+//       const err = new Error("cart not valid");
+//       rej(err);
+//     }
+//     const orderId = "12345";
+//     if (orderId) {
+//       res(orderId);
+//     }
+//   });
+//   return pr;
+// }
+
+// function proceedToPayment(id) {
+//   return new Promise((res, rej) => {
+//     res("success");
+//   });
+// }
+
+// function validateCart(cart) {
+//   return true;
+// }

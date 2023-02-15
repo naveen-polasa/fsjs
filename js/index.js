@@ -949,3 +949,153 @@
 // function validateCart(cart) {
 //   return true;
 // }
+
+// const prom = new Promise((res, rej) => {
+//   if (23 < 9) res(true);
+//   else rej(false);
+// });
+// console.log(prom)
+// prom.then((res) => console.log(res)).catch((er) => console.log(er));
+
+// const ex = async () => {
+//   return "done";
+// };
+
+// const ex1 = async () => {
+//   const ans = await ex();
+//   console.log(ans);
+// };
+
+// ex1()
+
+// log('start');
+
+// counter(1000)
+
+// function counter(time) {
+//     log('inside counter');
+//     setTimeout(() => {
+//         log('inside timeout');
+//     }, time);
+// }
+
+// log('end');
+
+// log = console.log;
+
+// const prom = new Promise((res, rej) => {
+//   if (13 > 1) {
+//     res('success');
+//     return;
+//   }
+//   rej('failure');
+// });
+
+// prom.then((s) => log(s));
+
+// const container = document.querySelector(".img-container");
+
+// btn.addEventListener("click", () => {
+//   const url = "https://source.unsplash.com/random";
+//   loadImage(url)
+//     .then((data) => container.appendChild(data))
+//     .catch((err) => console.log(err));
+// });
+
+// function loadImage(url) {
+//   return new Promise((res, rej) => {
+//     let img = new Image();
+//     img.addEventListener("load", () => {
+//       res(img);
+//     });
+//     img.addEventListener("error", () => {
+//       rej(new Error("Image Loading Failed"));
+//     });
+//     img.src = url;
+//   });
+// }
+
+// const first = document.querySelector(".first");
+// const second = document.querySelector(".second");
+// const third = document.querySelector(".third");
+// const btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", async () => {
+//   try {
+//     await addColor(first, "red", 3000);
+//     await addColor(second, "blue", 2000);
+//     await addColor(third, "green", 1000);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
+
+// const addColor = (selector, color, time) => {
+//   return new Promise((res, rej) => {
+//     if (selector) {
+//       setTimeout(() => {
+//         selector.style.color = color;
+//         res("success");
+//         return;
+//       }, time);
+//     } else {
+//       rej("failure");
+//     }
+//   });
+// };
+
+// const btn = document.querySelector(".btn");
+// const url = './api/people.json'
+// btn.addEventListener("click", () => {
+//   getData()
+// });
+
+// function getData() {
+//   let http = new XMLHttpRequest(url);
+
+//   http.open("GET", url);
+
+//   http.onreadystatechange = function () {
+//     if (http.readyState === 4 && http.status === 200) {
+//       const data = JSON.parse(http.responseText)
+//       const displayData = data.map(item=> {
+//         return `<p>${item.name}</p>`
+//       }).join('')
+//       const el = document.createElement('div')
+//       el.innerHTML = displayData
+//       document.body.appendChild(el)
+//     } else {
+//       console.log({
+//         status: http.status,
+//         text: http.statusText,
+//       });
+//     }
+//   };
+//   http.send();
+// }
+
+// const btn = document.querySelector(".btn");
+
+// const url = "./api/people.json";
+
+// btn.addEventListener("click", async () => {
+//   const resp = await fetch(url)
+//   const data = await resp.json()
+//   displayItems(data)
+//   // fetch(url)
+//   //   .then((resp) => resp.json())
+//   //   .then((data) => {
+//   //     displayItems(data);
+//   //   })
+//   //   .catch((err) => console.log(err));
+// });
+
+// const displayItems = (items) => {
+//   const displayData = items.map((item) => {
+//     const {name} = item
+//     return `<p>${name}</p>`
+//   }).join('');
+//   const el = document.createElement('div')
+//   el.innerHTML = displayData
+//   document.body.appendChild(el)
+// };
